@@ -31,7 +31,7 @@ int main(){
 }
 
 void varifyPassword(ofstream& fout, ifstream& fin, string password[], int size){
-	fout << "Nancy Gomez" << endl << endl;
+	fout << "Nancy Gomez";
 
 	// Creating a vector to store all of the passwords
 	string element;
@@ -41,11 +41,16 @@ void varifyPassword(ofstream& fout, ifstream& fin, string password[], int size){
 	}
 	
 	// Checking whether each array element is in the file
+	// deleting them if they are indeed there
 	for (int i = 0; i < size; i++){
 		for (int j = 0; j < filePasswords.size(); j++){
 			if (filePasswords[j] == password[i]){
-				fout << password[i] << endl;
+				password[i] = "";
 			}
 		}
+	}
+	
+	for (int i = 0; i < size; i++){
+		fout << password[i] << endl;
 	}
 }
