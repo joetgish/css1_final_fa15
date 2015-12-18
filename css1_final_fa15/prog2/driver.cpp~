@@ -106,9 +106,8 @@ void makeMove(string S[][C], int& posX, int& posY , char& choice, ofstream& B_ou
                 B_out << "elf[" << posX << "]" << posY << "]: Run!" <<endl;
             
             }
-        }
-    } 
-
+        } 
+    }
     
     B_out.close();
     return;
