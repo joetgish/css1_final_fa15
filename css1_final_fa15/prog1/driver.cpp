@@ -9,7 +9,7 @@ using namespace std;
 
 void fillVector(vector<string>& PW, ifstream& A_in);
 
-bool isPresent(string str, vector<string> v);
+bool isPresent(string str, vector<string> v);//search through vector and find if a string is there
 
 int main()
 {
@@ -33,7 +33,7 @@ int main()
 	fout << "Coleman Johnston\n";
 	for(int i = 0; i < SIZE; i++)
 	{
-		if(!isPresent(possible[i],vect))
+		if(!isPresent(possible[i],vect))//if a string is not in the file print to another file
 		{
 			fout << possible[i] << endl;
 		}
