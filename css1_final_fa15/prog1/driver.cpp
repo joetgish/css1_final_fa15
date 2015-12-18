@@ -95,6 +95,9 @@ void printVec(vector<string> vec, ofstream& B_out){
     
         B_out << vec[i] << endl; 
     }
+    
+    B_out.close(); 
+    
     return; 
 }
 

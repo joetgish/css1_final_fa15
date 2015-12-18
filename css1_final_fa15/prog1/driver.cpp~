@@ -1,5 +1,5 @@
-// Name
-// Date
+// Sarah Villegas 
+// 
 // CSS-1 Fa15 Final Exam Prog 1
 #include <iostream>
 #include <fstream>
@@ -75,7 +75,7 @@ void checkPassword(ofstream& B_out, string ary[], int arySize, vector<string> PW
             if(PW[j] != testWord){
             
                 okWords.push_back(testWord);
-                //break;
+                break;
                 
             }   
                   
