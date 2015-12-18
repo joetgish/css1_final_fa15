@@ -42,7 +42,12 @@ int main()
 	//printVector(passwords, fout);
 	nonCracked(passwords, possible, SIZE, fout); 
 
-	//cout << endl << "Ran fine." << endl;
+	cout << endl << "Ran fine." << endl;
+
+
+
+
+
 
 	fin.close();
 	fout.close();
@@ -65,7 +70,6 @@ void fillVector(vector<string>& PW, ifstream& A_in)
 	
 }// end fill Vector(_)
 
-//*************************************
 void printVector(vector<string> PW, ofstream& A_out)
 {
 	for(int ix = 0; ix < PW.size(); ix++)
@@ -76,7 +80,6 @@ void printVector(vector<string> PW, ofstream& A_out)
 	return;
 }
 
-//*************************************
 void nonCracked(vector<string> PW, string possPW[], int s, ofstream& A_out)
 {
 	int match = 0;
