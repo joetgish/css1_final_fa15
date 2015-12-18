@@ -88,5 +88,5 @@ void checkWork(string ary[], int length)
 
 	return;
 
-}//end checkWork()
+}
  
