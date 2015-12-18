@@ -16,13 +16,12 @@ void fillArray(ifstream& fin, string ary[][C]);
 
 void printArray(string ary[][C]);
 
-//void Array(ifstream& A_in, string [][C]);
-
 int main()
 {
 	ifstream finNorthPoleText;
 	ofstream foutStatusText;
 	string arrayOfData[R][C];
+	int numberOfZombies = 0;
 	
 	finNorthPoleText.open("northpole.txt");
 	foutStatusText.open("status.txt");
@@ -34,8 +33,50 @@ int main()
 	}
 
 	
+	
+
 	fillArray(finNorthPoleText, arrayOfData);
-	//printArray(arrayOfData);
+
+	foutStatusText << "Louis Paul Romero" << endl;
+	//CHECKING FOR ZOMBIES
+	for(int ix = 1; ix < R-1; ix++)
+	{
+		for(int jx = 1; jx < C-1; jx ++)
+		{
+			if((arrayOfData[ix][jx] == "@") && (arrayOfData[ix-1][jx] == "!")) //check north
+			{
+				numberOfZombies++;						
+			}
+			if( (arrayOfData[ix][jx] == "@") && (arrayOfData[ix+1][jx] == "!"))//check south 
+			{
+				numberOfZombies++;						
+			}
+			if( (arrayOfData[ix][jx] == "@") && (arrayOfData[ix][jx+1] == "!"))//check east
+			{
+				numberOfZombies++;						
+			}
+			if( (arrayOfData[ix][jx] == "@") && (arrayOfData[ix][jx-1] == "!"))//check west
+			{
+				numberOfZombies++;						
+			}
+			
+			if(numberOfZombies == 4)
+			{
+				foutStatusText << "elf[" << ix << "]" << "[" << jx <<"]: MUNCH!";	
+				foutStatusText << endl;
+						
+			}
+			if(numberOfZombies == 3)
+			{
+				foutStatusText << "elf[" << ix << "]" << "[" << jx <<"]: Run!";	
+				foutStatusText << endl;		
+			}
+			numberOfZombies = 0;	
+		}
+		
+	}
+	//CHECKING FOR ZOMBIES
+
 
 	finNorthPoleText.close();
 	foutStatusText.close();
@@ -51,7 +92,7 @@ void fillArray(ifstream& fin, string ary[][C])
 	{
 		for(int jx = 0; jx < C; jx ++)
 		{
-			fin >> ary[R][C];		
+			fin >> ary[ix][jx];		
 		}
 	}
 
@@ -63,7 +104,7 @@ void printArray(string ary[][C])
 	{
 		for(int jx = 0; jx < C; jx++)
 		{
-			cout << ary[R][C];		
+			cout << ary[ix][jx];		
 		}
 		cout << endl;
 	}
