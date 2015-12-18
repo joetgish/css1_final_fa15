@@ -25,6 +25,11 @@ int main()
 		cout << "Error opening file\n";
 		exit(1);
 	}
+
+	fout << "Name: Samuel Sanchez\n";
+	fout << "Date: 17 December 2015\n";
+	fout << "CSS-1 Fa15 Final Exam Prog 2\n";
+
 	fillArray(fin, positions);
 	printArray(positions);
 	tracker(positions, fout);
@@ -86,8 +91,8 @@ void printArray(string S[][C]) // Prints the 30x50 field
 			}
 			switch(surrounded) // If at 3, elf is told to run, if at 4, elf is eaten
 			{
-				case 3: cout << "elf[" << xi << "] [" << xj << "] Run!\n"; break;
-				case 4: cout << "elf[" << xi << "] [" << xj << "] Munch!\n"; break;
+				case 3: A_out << "elf[" << xi << "] [" << xj << "] Run!\n"; break;
+				case 4: A_out << "elf[" << xi << "] [" << xj << "] Munch!\n"; break;
 			}
 		}
 	}	
