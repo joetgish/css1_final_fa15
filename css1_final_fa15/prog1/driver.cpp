@@ -20,6 +20,11 @@ int main()
 	ofstream fout;
 	fin.open("passwords.txt");
 	fout.open("good_words.txt");
+	if(fin.fail() || fout.fail())
+	{
+		cout << "Error opening files" << endl;
+		exit(1);
+	}
 
 	vector<string> cracked;
 	fillVector(cracked, fin);
