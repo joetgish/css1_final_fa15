@@ -1,5 +1,5 @@
-// Name
-// Date
+// Name Noe Lomeli	
+// Date December 17 2015
 // CSS-1 Fa15 Final Exam Prog 1
 #include <iostream>
 #include <fstream>
