@@ -20,12 +20,14 @@ int main()
 	ifstream fin;
 	ofstream fout;
 	fin.open("passwords.txt");
-	fout.open("good_words.txt");
+	
 	if (fin.fail())
 	{
 		cout << "Error opening input file." << endl;
 		exit(1);
 	}
+	
+	fout.open("good_words.txt");
 	
 	if (fout.fail())
 	{
