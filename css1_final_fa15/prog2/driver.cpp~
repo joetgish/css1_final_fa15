@@ -26,11 +26,11 @@ int main()
 // ********************************
 void fillArray(ifstream& A_in, string S[][C])
 {
-	for (int i = 0; i < R; i++)//Rows
+	for (int i = 0; i < R; i++)
 	{
-		for (int j = 0; j < C; j++)//Cols
+		for (int j = 0; j < C; j++)
 		{
-			A_in >> S[i][j];//fills array
+			A_in >> S[i][j];
 		}
 	}
 	return;
@@ -38,28 +38,28 @@ void fillArray(ifstream& A_in, string S[][C])
 }//end fillArray
 void printArray(ofstream& A_out, string S[][C])
 {
-	for (int i = 1; i < R-1; i++)//Rows
+	for (int i = 1; i < R-1; i++)
 	{
-		for (int j = 1; j < C-1; j++)//Cols
+		for (int j = 1; j < C-1; j++)
 		{
-			int zombie = 0;//keeps count of zombies
+			int zombie = 0;
 			if (S[i][j] == "@")
 			{
-				if (S[i-1][j] == "!")//checks N,S,E,W
+				if (S[i-1][j] == "!")
 				{
-					zombie++;//increments the count of zombies
+					zombie++;
 				}
-				if (S[i+1][j] == "!")//checks N,S,E,W
+				if (S[i+1][j] == "!")
 				{
-					zombie++;//increments the count of zombies
+					zombie++;
 				}
-				if (S[i][j-1] == "!")//checks N,S,E,W
+				if (S[i][j-1] == "!")
 				{
-					zombie++;//increments the count of zombies
+					zombie++;
 				}
-				if (S[i][j+1] == "!")//checks N,S,E,W
+				if (S[i][j+1] == "!")
 				{
-					zombie++;//increments the count of zombies
+					zombie++;
 				}
 			}
 			
@@ -79,7 +79,7 @@ void printArray(ofstream& A_out, string S[][C])
 	}
 
 	return;
-}//end printArray
+}
 
 
 
