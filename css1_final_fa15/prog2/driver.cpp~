@@ -95,6 +95,18 @@ int main()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+	printArray(S, R, C);
 	a_in.close();
 	fout.close();
 	
