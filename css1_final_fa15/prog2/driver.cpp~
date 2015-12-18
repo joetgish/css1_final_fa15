@@ -92,8 +92,6 @@ void checkZombies(ofstream& A_out, string S[][C])
 
 	A_out << "Diego Medina" << endl << endl;
 
-
-	//start at 1 and subtract 1 from R and C to avoid looking at the borders
 	for(int ix = 1; ix < R - 1; ix++)
 	{
 
@@ -102,7 +100,6 @@ void checkZombies(ofstream& A_out, string S[][C])
 
 			if(S[ix][jx] == "@")
 			{
-				//checks N,S,E,W for zombies
 				if(S[ix - 1][jx] == "!")
 				{
 					zombies++;
@@ -123,7 +120,7 @@ void checkZombies(ofstream& A_out, string S[][C])
 					zombies++;
 				}	
 
-				//displays message to file
+
 				if(zombies == 3)
 				{
 					A_out << "Elf[" << ix << "][" << jx << "]: Run!" << endl << endl;
@@ -134,12 +131,12 @@ void checkZombies(ofstream& A_out, string S[][C])
 					A_out << "Elf[" << ix << "][" << jx << "]: Munch!" << endl << endl;
 				}
 			
-			}//end if array location is an elf
+			}
 	
 			zombies = 0;
-		}//for jx
+		}
 
-	}//forix
+	}
 
 	return;	
 
