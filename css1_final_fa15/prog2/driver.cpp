@@ -25,13 +25,13 @@ int main()
 	fout.open("status.txt");
 	string workShop[R][C];
 	int grinch;//number of grinches
-	
-	fillArray(fin,workShop);
 	if(fin.fail() || fout.fail())
 	{
 		cout << "File Error\n";
 		exit(1);
 	}	
+	
+	fillArray(fin,workShop);
 	
 	fout << "Coleman Johnston\n";
 	
