@@ -36,6 +36,14 @@ int main()
 	
 	fillArray(fin, elf);//fills array with northpole txt data
 
+	for (int i = 0; i < R; i++)
+	{
+		for ( int j = 0; j < C; j++)
+		{
+			cout << elf[i][j];
+		}
+cout << endl;
+}
 	fout << "Name: Raquel Figueroa\n";
 
 	for (int i = 0; i < R; i++)
@@ -46,6 +54,8 @@ int main()
 
 			if (elf[i][j] == "@")
 			{
+			//cout << "elf[" << i << "][" << j << "]: " << "Run!\n";
+
 				if ((j != 0) && (elf[i][j-1] == "!"))
 				{
 					zCount++;
