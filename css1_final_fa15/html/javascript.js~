@@ -1,0 +1,12 @@
+function DaysOfChristmas(){
+	var days = 12;
+	document.write(Ali Fenton);
+
+	for(int i = 0; i < 12; i++){
+		document.write(days - 1 + " days of Christmas");
+	}
+
+	document.write("Christmas is here");
+} 
+
+DaysOfChristams();
