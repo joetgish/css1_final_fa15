@@ -16,12 +16,6 @@ int main()
 {
 	string ary[R][C];
 	
-	ifstream fin;
-	ofstream fout;
-	
-	fin.open("northpole.txt");
-	fout.open("status.txt
-	
 	return 0;
 }
 
