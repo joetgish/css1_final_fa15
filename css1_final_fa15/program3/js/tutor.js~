@@ -1,0 +1,189 @@
+var done =true;
+var count =0;
+var right = 0;
+while(done !=false)
+{
+menu();
+var userInput = prompt("Do you want to continue? enter y for yes");
+if(userInput != 'y' )
+{
+	done = false;
+}
+if( (count % 5) === 0)
+{
+	window.alert( right+" right out of " +count );
+}
+}
+
+function subtraction()
+ {
+ 	var num1 = 0;
+ 	var num2 = 0;
+ 	var userInput;
+	for(var i =0; i < 5; i++)
+	{
+		num1 = (Math.floor(Math.random()*12)+1);	
+		num2 = (Math.floor(Math.random()*12)+1);
+		userInput = prompt("What is " + num1+ "-"+ num2+"?");
+		if(userInput == (num1-num2))
+		{
+			count = count + 1;
+			right =right +1;
+			compliment();
+		}
+		else if(userInput != (num1-num2))
+		{
+			count = count +1;
+			encourage();
+			window.alert(  num1-num2+" is the answer");
+		}
+	}
+ }
+ function division()
+ {
+ 	var num1 = 0;
+ 	var num2 = 0;
+ 	var userInput;
+	for(var i =0; i < 5; i++)
+	{
+		num1 = (Math.floor(Math.random()*12)+1);	
+		num2 = (Math.floor(Math.random()*12)+1);
+		userInput = prompt("What is " + num1+ "/"+ num2+"?");
+		if(userInput == (num1/num2))
+		{
+			count = count + 1;
+
+			right =right +1;
+			compliment();
+		}
+		else if(userInput != (num1/num2))
+		{
+			count = count +1;
+			encourage();
+			window.alert(  num1/num2+" is the answer");
+		}
+	}
+ }
+ function multiplication()
+ {
+ 	var num1 = 0;
+ 	var num2 = 0;
+ 	var userInput;
+	for(var i =0; i < 5; i++)
+	{
+		num1 = (Math.floor(Math.random()*12)+1);	
+		num2 = (Math.floor(Math.random()*12)+1);
+		userInput = prompt("What is " + num1+ "*"+ num2+"?");
+		if(userInput == (num1*num2))
+		{
+			count = count + 1;
+			right =right +1;
+			compliment();
+		}
+		else if(userInput != (num1*num2))
+		{
+			count = count +1;
+			encourage();
+			window.alert(  num1*num2+" is the answer");
+		}
+	}
+ }
+function addition()
+ {
+ 	var num1 =0;
+ 	var num2 = 0;
+ 	var userInput;
+	for(var i =0; i < 5; i++)
+	{
+		num1 = (Math.floor(Math.random()*12)+1);	
+		num2 = (Math.floor(Math.random()*12)+1);
+		userInput = prompt("What is " + num1+ "+"+ num2+"?");
+		if(userInput == (num1+num2))
+		{
+			count = count + 1;
+			right =right +1;
+			compliment();
+		}
+		else if(userInput != (num1+num2))
+		{
+			count = count +1;
+			encourage();
+			window.alert(  num1+num2+" is the answer");
+		}
+	}
+ }
+function compliment()
+ {
+
+ 	var num1 = (Math.floor(Math.random()*5)+1);
+ 	if(num1 === 1)
+ 	{
+ 		alert("Good Job");
+ 	}
+ 	else if(num1 === 2)
+ 	{
+ 		alert("Thats correct");
+ 	}
+ 	else if(num1 === 3)
+ 	{
+ 		alert("Great");
+ 	}
+ 	else if(num1 ===4)
+ 	{
+ 		alert("Perfect");
+ 	}
+ 	else if(num1 === 5)
+ 	{
+ 		alert("You got this");
+ 	}
+
+ }
+ function encourage()
+ {
+ 	var num1 = (Math.floor(Math.random()*5)+1);
+ 	if(num1 === 1)
+ 	{
+ 		alert("Dont give up");
+
+ 	}
+ 	else if(num1 === 2)
+ 	{
+ 		alert("Keep on going");
+ 	}
+ 	else if(num1 === 3)
+ 	{
+ 		alert("try again");
+ 	}
+ 	else if(num1 ===4)
+ 	{
+ 		alert("Next time");
+ 	}
+ 	else if(num1 === 5)
+ 	{
+ 		alert("Only one wrong");
+ 	}
+
+ }
+function menu()
+{
+	var userInput = prompt("Please enter what you want to do. + - / * ");
+
+	if (userInput === '+')
+	{
+		addition();
+	}
+	else if( userInput === '-')
+	{
+		subtraction();
+	}
+	else if(userInput === '/')
+	{
+		division();
+	}
+	else if(userInput === '*')
+	{
+		multiplication();
+	}
+}
+
+
