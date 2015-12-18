@@ -36,8 +36,6 @@ int main()
 
 	fillVector(p, fin);//fills vector with pwords from txt file
 
-	fout << "Name: Raquel Figueroa\n";
-
 	for(int i = 0; i < SIZE; i++)//iterates through password array
 	{
 		goodWord = true;
