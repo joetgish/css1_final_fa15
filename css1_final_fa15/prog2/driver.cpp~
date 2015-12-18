@@ -72,30 +72,13 @@ void checkStat(ofstream& out, string S[][C])
 				{
 					zombies++;				
 				}
-				if(S[ix+1][j] == "!")
-				{
-					zombies++;
-				}
-				if(S[ix][j-1] == "!")
-				{
-					zombies++;
-				}
-				if(S[ix][j+1] == "!")
+				else(S[ix+1][j] == "!")
 				{
 					zombies++;
 				}
 
-				if(zombies == 3)
-				{
-					out << "elf[" << ix << "][" << j << "]: Run!"<< endl;
-				}
-				if(zombies == 4)
-				{
-					out << "elf[" << ix << "][" << j << "]: Much!"<< endl;
-				}
 
 			}
-			zombies = 0;
 		}
 	}
 
