@@ -33,7 +33,6 @@ int main()
 		exit(1);
 	}	
 	
-	fout << "Coleman Johnston\n";
 	
 	for(int i = 1; i < R -1; i++)//don't check top or bottom row
 	{
