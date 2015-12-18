@@ -68,7 +68,6 @@ void checkZombies(string S[][C], ofstream& A_out)
 		{
 			if(S[i][j] == elf)
 			{
-				//check for three zombies
 				if(((S[i-1][j] == zombie) && (S[i][j-1] == zombie) && (S[i][j+1] == zombie) && (S[i+1][j] == blankSpace)) ||
 				((S[i-1][j] == zombie) && (S[i][j-1] == zombie) && (S[i][j+1] == blankSpace) && (S[i+1][j] == zombie)) || 
 				((S[i-1][j] == zombie) && (S[i][j-1] == blankSpace) && (S[i][j+1] == zombie) && (S[i+1][j] == zombie)) || 
@@ -76,8 +75,7 @@ void checkZombies(string S[][C], ofstream& A_out)
 				{
 					A_out << "elf[" << i << "][" << j << "]: Run!" << endl;
 				}
-				
-				//check for four zombies
+			
 				if((S[i-1][j] == zombie) && (S[i][j-1] == zombie) && (S[i][j+1] == zombie) && (S[i+1][j] == zombie))
 				{
 					A_out << "elf[" << i << "][" << j << "]: Munch!" << endl;
