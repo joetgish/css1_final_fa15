@@ -59,6 +59,7 @@ void checkElfs(string S[][C], ofstream& A_out)
 	{
 		for (int ix = 1; ix < C - 2; ix++)
 		{
+			cout << S[i][ix] << " ";
 			danger = 0;
 			if (S[i][ix] == "@")
 			{
