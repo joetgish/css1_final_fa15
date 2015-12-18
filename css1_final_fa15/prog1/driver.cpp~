@@ -8,7 +8,6 @@
 using namespace std;
 
 void fillVector(vector<string>& PW, ifstream& A_in);
-//void printVector(vector<string>& PW);
 void comparePW(vector<string>& PW, string ary[], int n, ofstream& A_out);
 
 int main()
@@ -26,8 +25,6 @@ int main()
 	
 	fout << "Emily Garcia" << endl; 
 	comparePW(crackedPassWords, possible, SIZE, fout);
-	
-	//printVector(crackedPassWords);
 	return 0;
 }
 
@@ -43,16 +40,6 @@ void fillVector(vector<string>& PW, ifstream& A_in)
 	}
 	return;
 }// end fill Vector(_)
-/*//*************************************
-void printVector(vector<string>& PW)
-{
-	for(int i = 0; i < PW.size(); i++)
-	{
-		cout << PW[i] << " ";
-	}
-	return;
-}// end print Vector(_)
-*/
 //*************************************
 void comparePW(vector<string>& PW, string ary[], int n, ofstream& A_out)
 {
