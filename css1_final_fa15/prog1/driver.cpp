@@ -61,6 +61,6 @@ bool isEqual(vector<string> PW, string str, int n)
 	}
 
 	return false;
-}// end isChecked(_) 
+}// end isEqual(_) 
 
  
