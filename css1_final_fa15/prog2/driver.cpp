@@ -61,7 +61,9 @@ void fillArray(ifstream& A_in, string S[][C])
 
 //****************************************************
 void makeMove(string S[][C], int& posX, int& posY , char& choice, ofstream& B_out){
-
+    
+     B_out << "Sarah Villegas" << endl; 
+    
     for(int i = 1; i < R-1; i++){
         
         for(int j = 1; j < C-1; j++){
@@ -104,8 +106,9 @@ void makeMove(string S[][C], int& posX, int& posY , char& choice, ofstream& B_ou
                 B_out << "elf[" << posX << "]" << posY << "]: Run!" <<endl;
             
             }
-        } 
-    }
+        }
+    } 
+
     
     B_out.close();
     return;
