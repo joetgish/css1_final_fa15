@@ -40,11 +40,12 @@ void varifyPassword(ofstream& fout, ifstream& fin, string password[], int size){
 		filePasswords.push_back(element);
 	}
 	
-	// Checking whether each array element is in the file
+	// Now comparing
 	for (int i = 0; i < size; i++){
 		for (int j = 0; j < filePasswords.size(); j++){
 			if (filePasswords[j] == password[i]){
 				fout << password[i] << endl;
+				cout << "Found " << password[i] << endl;
 			}
 		}
 	}

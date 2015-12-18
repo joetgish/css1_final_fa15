@@ -33,12 +33,12 @@ int main(){
 
 // **************************************************************************
 //	Precondition: Takes in the both if and ofstream to input and output data
-//  also takes in the empty array that was created in main
+//  also takes in the array that was created in main
 //	Postcondition: Fills in the empty array with the data provided from north-
 //  pole.txt. Then the following for loop checks all of the non-outer rows and
-//	columns for an elf. If it finds an elf it checks N, S, E, and W of that
-// 	location for zombies. When a zombie is found, the zombieCount increments.
-//	Depending on the number of zombies, "Run" or "Munch" is output to the file
+//	columns for an elf. If it finds an elf it checks N, S, E,  and W of that
+// 	location for zombies. When a zombie is found, the zombieCOunt increments.
+//	Depending on the number of zombies, "Run" or "Munch" is putput to the file
 // ***************************************************************************
 void fillArray(ifstream& fin, ofstream& fout, string S[][C]){
 	// filling the array with the data from the northpole file
