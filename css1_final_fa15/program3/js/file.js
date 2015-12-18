@@ -8,5 +8,4 @@ function countdown()
 	}
 	document.write("Christmas is here!!");
 }
-
 countdown();
