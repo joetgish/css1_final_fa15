@@ -30,6 +30,7 @@ int main()
 	const int SIZE = 6;
 	string possible[SIZE] = {"zymogenic","aboral","Santa","password1","Password!",
 							  "ambystomidae"};
+	fout << "Coleman Johnston\n";
 	for(int i = 0; i < SIZE; i++)
 	{
 		if(!isPresent(possible[i],vect))
