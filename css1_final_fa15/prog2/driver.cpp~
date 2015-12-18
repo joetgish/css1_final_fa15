@@ -77,31 +77,6 @@ void west(int& a, int& b)
 	return;
 }//END WEST
 
-int countZombie(string S[][C], int a, int b)
-{
-	int num = 0;
-	north(a,b);
-	if (S[a][b] == "!")
-	{
-		num++;
-	}
-	south(a,b);
-	if (S[a][b] == "!")
-	{
-		num++;
-	}
-	east(a,b);
-	if (S[a][b] == "!")
-	{
-		num++;
-	}
-	west(a,b);
-	if (S[a][b] == "!")
-	{
-		num++;
-	}
-	return num;
-}//END COUNT ZOMBIE
 
 void status(string S[][C], ofstream& A_out)
 {
@@ -128,4 +103,30 @@ void status(string S[][C], ofstream& A_out)
 	}//END ROW
 	return;
 }//END RUN
+
+int countZombie(string S[][C], int a, int b)
+{
+	int num = 0;
+	north(a,b);
+	if (S[a][b] == "!")
+	{
+		num++;
+	}
+	south(a,b);
+	if (S[a][b] == "!")
+	{
+		num++;
+	}
+	east(a,b);
+	if (S[a][b] == "!")
+	{
+		num++;
+	}
+	west(a,b);
+	if (S[a][b] == "!")
+	{
+		num++;
+	}
+	return num;
+}//END COUNT ZOMBIE
  

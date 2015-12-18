@@ -30,7 +30,6 @@ int main()
 	fillVector(cracked, fin);
 	//printVector(cracked);
 
-
 	fout << "Mavey Ma" << endl;
 	comparePassword(possible, SIZE, cracked, fout);
 
