@@ -1,7 +1,7 @@
 // Name Mavey Ma
 // Date Dec. 17, 2015 Thurs
 // CSS-1 Fa15 Final Exam Prog 2
-// 
+// CHRISTMAS ELVES.
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -12,13 +12,12 @@ const int R = 30;
 const int C = 50;
  
 void fillArray(ifstream& A_in, string S[][C]);
-void north(int& a, int& b);
-void south(int& a, int& b);
-void east(int& a, int& b);
-void west(int& a, int& b);
+int north(int a, int b, int count, string S[][C]);
+int south(int a, int b, int count, string S[][C]);
+int east(int a, int b, int count, string S[][C]);
+int west(int a, int b, int count, string S[][C]);
 void status(string S[][C], ofstream& A_out);
 int countZombie(string S[][C], int a, int b);
-
 
 int main()
 {
@@ -34,7 +33,6 @@ int main()
 	fillArray(fin, winter);
 	status(winter, fout);
 	
-
 	fin.close();
 	fout.close();
 	return 0;
@@ -53,66 +51,89 @@ void fillArray(ifstream& A_in, string S[][C])
 	}//END ROW 
 }//end fillArray
 
-void north(int& a, int& b)
+/*
+int north(int a, int b, int count, string S[][C])
 {
 	a -= 1;
-	return;
+	if (S[a][b] == "!")
+	{
+		count++;
+	}
+	return count;
 }//END NORTH
 
-void south(int& a, int& b)
+int south(int a, int b, int count, string S[][C])
 {
 	a += 1;
-	return;
+	if (S[a][b] == "!")
+	{
+		count++;
+	}
+	return count;
 }//END SOUTH
 
-void east(int& a, int& b)
+int east(int a, int b, int count, string S[][C])
 {
 	b += 1;
-	return;
+	if (S[a][b] == "!")
+	{
+		count++;
+	}
+	return count;
 }//END EAST
 
-void west(int& a, int& b)
+int west(int a, int b, int count, string S[][C])
 {
 	b -= 1;
-	return;
+	if (S[a][b] == "!")
+	{
+		count++;
+	}
+	return count;
 }//END WEST
 
-int countZombie(string S[][C], int a, int b)
+int countZombie(string S[][C], int valA, int valB)
 {
 	int num = 0;
-	north(a,b);
-	if (S[a][b] == "!")
-	{
-		num++;
-	}
-	south(a,b);
-	if (S[a][b] == "!")
-	{
-		num++;
-	}
-	east(a,b);
-	if (S[a][b] == "!")
-	{
-		num++;
-	}
-	west(a,b);
-	if (S[a][b] == "!")
-	{
-		num++;
-	}
+	num += north(valA, valB, num, S);
+	num += south(valA, valB, num, S);
+	num += east(valA, valB, num, S);
+	num += west(valA, valB, num, S);
 	return num;
 }//END COUNT ZOMBIE
-
+*/
 void status(string S[][C], ofstream& A_out)
 {
-	for (int i=0; i<R; i++)
+	for (int i=1; i<R-1; i++)
 	{
-		for (int j=0; j<C; j++)
+		for (int j=1; j<C-1; j++)
 		{
+			//WHENEVER THERE'S AN ELF...
 			if (S[i][j] == "@")
 			{
 				//HOW MANY ZOMBIES ADJACENT?
-				int ans = countZombie(S,i,j);
+				//int ans = countZombie(S,i,j);
+				int ans = 0;
+				//NORTH
+				if (S[i-1][j] == "!")
+				{
+					ans++;
+				}
+				//SOUTH
+				if (S[i+1][j] == "!")
+				{
+					ans++;
+				}
+				//EAST
+				if (S[i][j+1] == "!")
+				{
+					ans++;
+				}
+				//WEST
+				if (S[i][j-1] == "!")
+				{
+					ans++;
+				}
 				if (ans == 4)
 				{
 					S[i][j] = "E";
@@ -123,7 +144,7 @@ void status(string S[][C], ofstream& A_out)
 					S[i][j] = "R";
 					A_out << "elf [" << i << "][" << j << "]: Run!" << endl;
 				}
-			}//END ELF	
+			}//END ELF
 		}//END COL
 	}//END ROW
 	return;
