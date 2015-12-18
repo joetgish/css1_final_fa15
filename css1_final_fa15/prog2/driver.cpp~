@@ -1,6 +1,6 @@
-// Alexis Muñoz
-// 17 December 2015
-// CSS-1 Fa15 Final Exam Prog 2
+// Program comments here 
+// 
+// 
 #include <iostream>
 #include <fstream>
 using namespace std;
